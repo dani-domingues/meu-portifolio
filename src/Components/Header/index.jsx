@@ -1,13 +1,17 @@
+import { StyledHeader } from "./home-styled";
+
 function Header() {
     return (
-      <div className="Header">
-        <li>
-            <ul> Home </ul>
-            <ul> Home </ul>
-            <ul> Home </ul>
-            <ul> Home </ul>
-        </li>
-      </div>
+<StyledHeader>
+  <div>
+    <ul>
+      <li>Home</li>
+      <li>Sobre</li>
+      <li>Projetos</li>
+      <li>Contato</li>
+    </ul>
+  </div>
+</StyledHeader>
     );
   }
   
