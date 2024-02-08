@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import minhaImagem1 from '../assets/minhaImagem1.jpeg';
 import { StyledHome } from "./home-styled";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
@@ -9,9 +10,10 @@ function Home() {
     <Header> </Header>
     <StyledHome>
     <h1>Hello World!!</h1>
-    <p>Sou uma desenvolvedora fullstack, estou em uma joranda para aprimorar minhas habilidades na ate da programação, impulsionada pela dedicação e criatividade.</p>
+    <p>Sou uma desenvolvedora fullstack, estou em uma jornada para aprimorar minhas habilidades na arte da programação, impulsionada pela dedicação e criatividade.</p>
     <img src={minhaImagem1} alt="Descrição da imagem" />
     </StyledHome>
+    <Footer></Footer>
     </div>
   );
 }

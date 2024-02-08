@@ -5,7 +5,7 @@ function Header() {
 <StyledHeader>
   <div>
     <ul>
-      <li>Home</li>
+      <li>Inicio</li>
       <li>Sobre</li>
       <li>Projetos</li>
       <li>Contato</li>
