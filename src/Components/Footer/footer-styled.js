@@ -10,6 +10,13 @@ export const StyledFooter = styled.div`
     display: flex;
     flexDirection: row;
 
+    
+    @media only screen and (max-width: 600px) {
+      .container {
+          padding: 10px; /* Ajusta o preenchimento para telas pequenas */
+      }
+  }
+
   div.button-container{
     margin-left: 450px;
   }
