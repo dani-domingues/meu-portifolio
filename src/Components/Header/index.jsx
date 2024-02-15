@@ -8,7 +8,8 @@ function Header() {
       <li>Inicio</li>
       <li>Sobre</li>
       <li>Projetos</li>
-      <li>Contato</li>
+      <li>Habilidades</li>
+      <li>Certificados</li>
     </ul>
   </div>
 </StyledHeader>
