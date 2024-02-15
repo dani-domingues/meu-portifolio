@@ -28,4 +28,26 @@ img {
     border-radius: 50%;
 }
 
+
+@media only screen and (min-width: 768px) {
+    /* Media query para dispositivos maiores */
+    h1 {
+        margin-top: 250px; /* Restaura a margem para dispositivos maiores */
+        margin-left: 100px;
+        font-size: 70px;
+    }
+
+    p {
+        width: 730px;
+        margin-left: 100px;
+        margin-top: -40px;
+        font-size: 20px;
+    }
+
+    img {
+        margin-left: 880px;
+        margin-top: -280px;
+    }
+}
+
 `
