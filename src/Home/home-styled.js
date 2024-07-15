@@ -1,53 +1,53 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { breakpoints } from '../styles/response';
 
-export const StyledHome = styled.div`
-margin-top: -70px;
-width:100%;
-height: 100%;
 
-h1 {
-    margin-top: 250px;
-    margin-left: 100px;
-    font-size: 70px;
+function responsiveProp(prop, callback) {
+  if (prop) {
+    return breakpoints.map(breakpoint => {
+      if (prop[breakpoint.name]) {
+        return css`
+          @media (max-width: ${breakpoint.media}px) {
+            ${callback(breakpoint)}
+          }
+        `;
+      }
+    });
+  }
 }
 
-p {
+export const StyledHome = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: -900px;
+
+  div h1 {
+    text-align: left; /* Centraliza horizontalmente */
+    margin-top: 1070px;
+        margin-left: 100px;
+  }
+
+  div p {
     width: 730px;
     text-align: left; /* Centraliza horizontalmente */
     margin-left: 100px;
-    margin-top: -40px;
+    margin-top: 10px;
     font-size: 20px;
-}
+  }
 
-img {
-    width: 450px;
-    height: 450px;
+  div img {
+    width: 400px;
+    height: 400px;
     flex-shrink: 0;
     margin-left: 880px;
-    margin-top: -280px;
+    margin-top: -250px;
     border-radius: 50%;
-}
+  }
 
-
-@media only screen and (min-width: 768px) {
-    /* Media query para dispositivos maiores */
-    h1 {
-        margin-top: 250px; /* Restaura a margem para dispositivos maiores */
-        margin-left: 100px;
-        font-size: 70px;
-    }
-
-    p {
-        width: 730px;
-        margin-left: 100px;
-        margin-top: -40px;
-        font-size: 20px;
-    }
-
-    img {
-        margin-left: 880px;
-        margin-top: -280px;
-    }
-}
-
-`
+  ${({ squareSize }) => {
+    return responsiveProp(squareSize, (breakpoint) => css`
+      width: ${squareSize[breakpoint.name]}px;
+      height: ${squareSize[breakpoint.name]}px;
+    `)
+  }}
+`;
