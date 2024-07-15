@@ -23,8 +23,9 @@ export const StyledHome = styled.div`
 
   div h1 {
     text-align: left; /* Centraliza horizontalmente */
-    margin-top: 1070px;
-        margin-left: 100px;
+    margin-top: 975px;
+    margin-left: 100px;
+    font-size: 70px
   }
 
   div p {
